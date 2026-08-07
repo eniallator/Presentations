@@ -1,9 +1,13 @@
 ---
-title: Optimizing Websites
+title: Web Performance, End to End
 theme: gaia
 _class: lead
 paginate: true
 backgroundImage: radial-gradient(circle farthest-corner at center, #fff 0%, #ddd 100%)
+links:
+  - url: https://www.youtube.com/watch?v=Qbq6J6dQfcg
+    label: Web Performance, End to End
+    date: 2026-08-06
 ---
 
 <!--

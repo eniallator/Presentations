@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Presentations</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem; }
+      ul { list-style: none; padding: 0; }
+      li { margin-bottom: 1.5rem; }
+      a.deck { font-size: 1.25rem; font-weight: 600; text-decoration: none; }
+      a.deck:hover { text-decoration: underline; }
+      ul.given { list-style: disc; padding-left: 1.5rem; margin-top: 0.5rem; font-size: 0.9rem; }
+      .date { color: #666; }
+    </style>
+  </head>
+  <body>
+    <h1>Presentations</h1>
+    <ul>
+      <% for (const deck of decks) { %>
+      <li>
+        <a class="deck" href="./<%= deck.name %>/"><%= deck.title %></a>
+        <% if (deck.links.length > 0) { %>
+        <ul class="given">
+          <% for (const link of deck.links) { %>
+          <li>
+            <a href="<%= link.url %>" target="_blank" rel="noreferrer"><%=
+              link.label %></a>
+            <% if (link.date) { %><span class="date">(<%= link.date %>)</span><%
+            } %>
+          </li>
+          <% } %>
+        </ul>
+        <% } %>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
