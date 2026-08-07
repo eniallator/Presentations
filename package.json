@@ -1,0 +1,10 @@
+{
+  "name": "presentations",
+  "packageManager": "yarn@4.17.1",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.4.1"
+  },
+  "scripts": {
+    "export": "marp --html -I ./decks -o ./out"
+  }
+}
